@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+function guessgame {
 exitgame=0
 filenum=$(ls | wc -l)
 
@@ -10,7 +11,7 @@ do
 	re='^[0-9]+$'
 	if ! [[ $response =~ $re ]]
 	then
-   		echo "Please enter a valid number, try again"
+		echo "Please enter a valid number, try again"
 	elif [[ $response -gt $filenum ]]
 	then
 		echo "Your guess is too high, try again!"
@@ -22,3 +23,6 @@ do
 		exitgame=1
 	fi
 done
+}
+
+guessgame
