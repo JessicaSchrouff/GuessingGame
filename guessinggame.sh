@@ -7,6 +7,7 @@ filenum=$(ls | wc -l)
 while [[ $exitgame -eq 0 ]]
 do
 	echo "How many files are in the directory?"
+	echo "Your guess:"
 	read response
 	re='^[0-9]+$'
 	if ! [[ $response =~ $re ]]
